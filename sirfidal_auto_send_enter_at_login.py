@@ -161,7 +161,7 @@ def main():
                 continue
 
               try:
-                sleep(.2)   # Pause before typing to let GUI catch up
+                sleep(.1)   # Pause before typing to let GUI catch up
                 ui.write(ecodes.EV_KEY, ecodes.KEY_ENTER, 1)
                 ui.syn()
                 sleep(.1)   # Pause needed for gdm
