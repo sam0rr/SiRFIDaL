@@ -143,7 +143,7 @@ def main():
           # Has the number of active UIDs increased?
           if chg > 0:
 
-            Find out the active virtual console
+            # Find out the active virtual console
             vc = active_vc()
             if not vc:
               print("Error determining the active virtual console")
@@ -161,13 +161,13 @@ def main():
                 continue
 
               try:
-                sleep(.5)   # Pause before typing to let GUI catch up
+                sleep(.2)   # Pause before typing to let GUI catch up
                 ui.write(ecodes.EV_KEY, ecodes.KEY_ENTER, 1)
                 ui.syn()
-                sleep(.2)   # Pause needed for gdm
+                sleep(.1)   # Pause needed for gdm
                 ui.write(ecodes.EV_KEY, ecodes.KEY_ENTER, 0)
                 ui.syn()
-                sleep(.2)   # Pause needed for gdm
+                sleep(.1)   # Pause needed for gdm
                 print("ENTER sent to console {}".format(vc))
               except Exception as e:
                 print("UInput write error: {}".format(e))
