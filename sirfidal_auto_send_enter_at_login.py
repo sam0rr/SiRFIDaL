@@ -161,13 +161,13 @@ def main():
                 continue
 
               try:
-                sleep(.2)   # Pause before typing to let GUI catch up
+                sleep(.5)   # Pause before typing to let GUI catch up
                 ui.write(ecodes.EV_KEY, ecodes.KEY_ENTER, 1)
                 ui.syn()
-                sleep(.1)   # Pause needed for gdm
+                sleep(.2)   # Pause needed for gdm
                 ui.write(ecodes.EV_KEY, ecodes.KEY_ENTER, 0)
                 ui.syn()
-                sleep(.1)   # Pause needed for gdm
+                sleep(.2)   # Pause needed for gdm
                 print("ENTER sent to console {}".format(vc))
               except Exception as e:
                 print("UInput write error: {}".format(e))
