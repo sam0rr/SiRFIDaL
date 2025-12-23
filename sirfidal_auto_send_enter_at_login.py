@@ -144,10 +144,10 @@ def main():
           if chg > 0:
 
             # Find out the active virtual console
-            vc = active_vc()
-            if not vc:
-              print("Error determining the active virtual console")
-              continue
+            # vc = active_vc()
+            # if not vc:
+            #   print("Error determining the active virtual console")
+            #   continue
 
             # If no session is running on the active virtual console, or a
             # greeter session is running, send the keystroke sequence for
